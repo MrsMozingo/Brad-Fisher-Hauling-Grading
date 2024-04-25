@@ -1,0 +1,246 @@
+#testimonial-section {
+    color: #E6E6E6; /* Dark grey color for text */
+  }
+  
+  #testimonial-section .fs-4 {
+    font-size: 1.5rem; 
+  }
+  
+  #testimonial-section .fw-bold {
+    color: #b3b3b3; /
+  }
+
+
+  :root {
+    --bs-body-color2: #e6e6e6; /* Custom color */
+}
+
+.h1-custom-color {
+    color: var(--bs-body-color2);
+}
+
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  
+#weight, .input-group-text {
+    border-radius: 0.375rem; 
+}
+
+/* Specifically target only the first and last child of the input-group to have rounded corners on the outer edges */
+.input-group > .form-control:first-child,
+.input-group > .input-group-text:first-child {
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+.input-group > .form-control:last-child,
+.input-group > .input-group-text:last-child {
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+
+.input-group-text {
+  border-radius: 0.25rem !important; /* Apply rounded corners to all input-group-text elements uniformly */
+}
+
+    .first-line-indent {
+        text-indent: 2em; 
+        padding-top: 1em;
+    }
+
+    /* Custom larger display class */
+.display-0 {
+  font-size: 4rem; 
+  font-weight: 300; 
+}
+
+.padded-card {
+  padding: 2rem; 
+}
+
+
+
+
+/* Header Title Text Sizes */
+
+/* Default font size for very small devices */
+.header-title {
+  font-size: 16px; /* Minimum font size */
+}
+
+/* Increase font size for devices wider than 400px */
+@media (min-width: 300px) {
+  .header-title {
+      font-size: calc(9px + 3.5vw); /* Gradually increase from 16px */
+  }
+}
+
+@media (min-width: 400px) {
+  .header-title {
+      font-size: calc(10px + 3.5vw); /* Gradually increase from 16px */
+  }
+}
+
+/* Adjust font size for medium screens */
+@media (min-width: 692px) {
+  .header-title {
+      font-size: calc(14px + 2.5vw); /* Adjust the scaling factor */
+  }
+}
+
+/* Cap the font size for large screens */
+@media (min-width: 1200px) {
+  .header-title {
+      font-size: 48px; /* Maximum font size */
+  }
+}
+
+
+/* Header Sub-Title Text Sizes */
+
+@media (min-width: 229px) {
+  .sub-header-title {
+      font-size: 9px;
+  }
+}
+
+@media (min-width: 400px) {
+  .sub-header-title {
+      font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sub-header-title {
+      font-size: 16px;
+  }
+}
+
+/* For large screens where 3.5vw >>>>> might become too large? */
+@media (min-width: 1200px) {
+  .sub-header-title {
+      font-size: 20px; /* Maximum font size */
+  }
+}
+
+.nav-icon {
+  color: #ffb549;
+  font-size: 1.75em;
+}
+
+
+/* Custom CSS for Header Background Image */
+header.bg-dark {
+  background: url('../images/sitemaphero.jpg') no-repeat center center fixed;
+  background-size: cover; /* makes sure background covers the entire header? */
+}
+
+/* Image Overlay Beginning */
+
+/* Custom CSS for Header Background Image with Overlay */
+header.bg-dark {
+  position: relative; 
+  background: url('../images/sitemaphero.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensures the background covers the entire header */
+}
+
+header.bg-dark::before {
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1; /* Ensures the overlay is above the background image but below the text */
+}
+
+/* Ensure header content is above the overlay */
+header.bg-dark > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Image Overlay Ending */
+
+
+
+.responsive-video {
+  width: 35%;
+  height: auto;
+}
+
+.px-6 {
+  padding-right: 5rem !important;
+  padding-left: 5rem !important;
+}
+
+
+
+
+/*Background image likely to be deleted after testing*/
+/* Custom CSS for Body Background Image with Overlay */
+.custom-background {
+  position: relative; /* Needed for the pseudo-element to position correctly */
+  background: url('../images/sitemaphero.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensures the background covers the entire page */
+  min-height: 200px; /* Minimum height to cover the whole viewport */
+  z-index: 1; /* Behind the text but above the background image */
+}
+
+.custom-background::before {
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  height: 100%; /* Cover the entire height of the footer */
+}
+
+/* Elevate text content above the overlay */
+.custom-background .container {
+  position: relative;
+  z-index: 2; /* Above the overlay */
+}
+
+/* Custom styles for responsive links */
+.responsive-link {
+  padding: 4px;
+  display: inline-block;
+  transition: color 0.1s ease, opacity 0.1s ease;
+}
+
+.responsive-link:hover {
+  color: #FFB549 !important;
+  opacity: 0.8;
+}
+
+/* Responsive settings for icons within responsive links */
+.responsive-link .bi {
+  transition: color 0.1s ease, opacity 0.1s ease;  
+}
+
+.responsive-link:hover .bi {
+  color: #FFB549;
+  opacity: 0.8;
+}
+
+
+
+/* Creating simi-bold font to use on buttons */
+.fw-semi-bold {
+  font-weight: 600;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
